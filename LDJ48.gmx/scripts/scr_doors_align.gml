@@ -5,7 +5,7 @@ cell_into = argument1
 
 //get the door number of the opposite door
 var collarary = -1
-switch(door_no) {
+switch(doorno) {
     case 0:
         collarary = 8
         break

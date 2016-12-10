@@ -2,7 +2,9 @@
 
 var cellno = argument0
 var doorno = argument1
-var direc = floor(doorno/4) //what direction does the door go
+var direc = floor(doorno/3) //what direction does the door go
+
+show_message(doorno)
 
 var gx = 0 //loads of temp vars to hold dr_grid cords
 var gy = 0
@@ -32,6 +34,7 @@ switch(direc) { //find the cords of the neighbouring cell in the direction suppl
 }
 
 if(obj_cont_cell.ds_gr_map[# nx, ny] != -1) { // if the cell isnt empty
+    show_message('according to the laws of aviation there is no waya abee can fly')
     if(scr_doors_align(doorno, obj_cont_cell.ds_gr_map[# nx, ny])) { //if the doors line up
         return true //you can ship it
     }    
