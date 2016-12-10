@@ -1,5 +1,8 @@
 ///scr_doors_align(door_no,cell_into)
 
+doorno = argument0
+cell_into = argument1
+
 //get the door number of the opposite door
 var collarary = -1
 switch(door_no) {
@@ -41,11 +44,17 @@ switch(door_no) {
         break
 }
 
+if(obj_cont_cell.arr_doors[cell_into,collarary] == 1){ //check if there is a door in the oppostie location in the next cell
+    return true
+}
+
+return false
+
+/*
 var west = door_no-1
 var east = door_no+1
 var north = door_no+6
 var south = door_no-6
-///scr_doors_align(door_no,cell_into)
 
 
 //check that those aren't returning out of bounds data
