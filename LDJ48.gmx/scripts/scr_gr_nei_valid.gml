@@ -2,17 +2,17 @@
 
 var cellno = argument0
 var doorno = argument1
-var direc = floor(doorno/4)
+var direc = floor(doorno/4) //what direction does the door go
 
-var gx = 0
+var gx = 0 //loads of temp vars to hold dr_grid cords
 var gy = 0
 var nx = 0
 var ny = 0
 
-gx = obj_cont_cell.arr_locations[cellno,0]
-gy = obj_cont_cell.arr_locations[cellno,1]
+gx = obj_cont_cell.arr_locations[cellno,0] //get the location of the current cell from the arr_loc
+gy = obj_cont_cell.arr_locations[cellno,1] 
 
-switch(direc) {
+switch(direc) { //find the cords of the neighbouring cell in the direction supplied
     case 0:
         nx = gx+1
         ny = gy
@@ -31,10 +31,10 @@ switch(direc) {
         break
 }
 
-if(obj_cont_cell.ds_gr_map[# nx, ny] != -1) {
-    if(scr_doors_align(doorno, obj_cont_cell.ds_gr_map[# nx, ny])) {
-        return true
+if(obj_cont_cell.ds_gr_map[# nx, ny] != -1) { // if the cell isnt empty
+    if(scr_doors_align(doorno, obj_cont_cell.ds_gr_map[# nx, ny])) { //if the doors line up
+        return true //you can ship it
     }    
 }
 
-return false
+return false //the cannon sinks it
