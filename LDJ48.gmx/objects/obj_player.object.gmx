@@ -53,19 +53,27 @@
     {
     case vk_left:
     case ord("A"):
-       x -= 4;
+        if(!collision_point(x-16, y, obj_wall,false, true)) {
+            x -= 4                
+        }
        break;
     case vk_right:
     case ord("D"):
-       x += 4;
+        if(!collision_point(x+16, y, obj_wall,false, true)) {
+            x += 4
+        }
        break;
     case vk_up:
     case ord("W"):
-       y -= 4;
+        if(!collision_point(x, y-16, obj_wall,false, true)) {
+            y -= 4
+        }
        break;
     case vk_down:
     case ord("S"):
-       y += 4;
+       if(!collision_point(x, y+16, obj_wall,false, true)) {
+           y += 4
+        }
        break;
     }
  }
@@ -121,37 +129,6 @@ if(point_distance(x,y,close.x+12,close.y+12) &lt; 30) {
     scr_move(cell_id,close.pos)
     //show_message('ping')
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="13">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>cellinto = 1
-doorno = 1
-
-scr_move(0,1)
-
-/*
-  scr_tp_macro(cellinto)
-  scr_tp_micro(doorno)
-  scr_move_view(cellinto)
 </string>
           </argument>
         </arguments>
