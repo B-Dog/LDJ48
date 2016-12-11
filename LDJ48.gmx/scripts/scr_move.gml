@@ -37,7 +37,7 @@ if(scr_gr_nei_valid(cellno,doorno)){
     }        
     
     cellinto = obj_cont_cell.ds_gr_map[# nx, ny]
-    
+    show_message(cellinto)
     scr_tp_macro(cellinto)
     if(cellinto == 0) { scr_move_closet(doorno) } else { scr_tp_micro(doorno) }
     scr_move_view(cellinto)
