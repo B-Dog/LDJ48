@@ -12,3 +12,11 @@ for(var i = 0; i<36; i++) {
     arr_locations[i,0] = -1
     arr_locations[i,1] = -1
 }
+
+ds_gr_reveal = ds_grid_create(36, 36)
+ds_gr_reveal[# 0,1] = 1  // origin always revealed
+for(var i=0; i<36; i++) {
+    for(var ii=2; ii<35; ii++) {
+        ds_gr_reveal[# i, ii] = -1
+    }
+}
