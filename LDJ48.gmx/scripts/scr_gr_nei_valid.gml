@@ -37,7 +37,8 @@ if(obj_cont_cell.ds_gr_map[# nx, ny] != -1) { // if the cell isnt empty
     show_message('according to the laws of aviation there is no waya abee can fly')
     if(scr_doors_align(doorno, obj_cont_cell.ds_gr_map[# nx, ny])) { //if the doors line up
         // do the great reveal on the minimap!
-        obj_cell_cont.ds_gr_reveal[# nx, ny] = 1
+        obj_cont_cell.ds_gr_reveal[# nx, ny] = 1
+        
         
         return true //you can ship it
     }    
