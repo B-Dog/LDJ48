@@ -24,7 +24,7 @@ if(scr_gr_nei_valid(cellno,doorno)){
             break
         case 1:
             nx = gx
-            ny = gy+1
+            ny = gy-1
             break
         case 2:
             nx = gx-1
@@ -32,12 +32,11 @@ if(scr_gr_nei_valid(cellno,doorno)){
             break
         case 3:
             nx = gx
-            ny = gy-1
+            ny = gy+1
             break
     }        
     
     cellinto = obj_cont_cell.ds_gr_map[# nx, ny]
-    show_message(cellinto)
     scr_tp_macro(cellinto)
     if(cellinto == 0) { scr_move_closet(doorno) } else { scr_tp_micro(doorno) }
     scr_move_view(cellinto)

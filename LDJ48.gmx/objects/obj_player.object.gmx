@@ -101,6 +101,8 @@
             <kind>1</kind>
             <string>draw_self()
 draw_text(x,y-32,cell_id)
+draw_text(x,y+32,x)
+draw_text(x,y+40,y)
 </string>
           </argument>
         </arguments>

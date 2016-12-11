@@ -1,5 +1,5 @@
 ///scr_minimap(cellno)
-
+/*
 var cellno = argument0
 
 var gx = arr_locations[cellno,0]
