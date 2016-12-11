@@ -11,6 +11,7 @@
     <sprite>sprites\spr_wall_l_v</sprite>
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_door</sprite>
+    <sprite>sprites\spr_minimap</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -27,6 +28,7 @@
     <script>scripts\scr_prox_check.gml</script>
     <script>scripts\scr_move_closet.gml</script>
     <script>scripts\scr_door_collarary.gml</script>
+    <script>scripts\scr_minimap.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_wall</object>
@@ -36,6 +38,7 @@
     <object>objects\obj_door_closet</object>
     <object>objects\obj_player</object>
     <object>objects\obj_cont_cell</object>
+    <object>objects\obj_minimap</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

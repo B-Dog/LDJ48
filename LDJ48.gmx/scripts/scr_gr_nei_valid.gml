@@ -38,8 +38,13 @@ if(obj_cont_cell.ds_gr_map[# nx, ny] != -1) { // if the cell isnt empty
     if(scr_doors_align(doorno, obj_cont_cell.ds_gr_map[# nx, ny])) { //if the doors line up
         // do the great reveal on the minimap!
         obj_cont_cell.ds_gr_reveal[# nx, ny] = 1
-        
-        
+        /*for(var i=0; i<36; i++) {
+            for(var ii=0; i<36; ii++) {
+                // render the changes
+                obj_minimap.render
+            }
+        }
+        */
         return true //you can ship it
     }    
 }
