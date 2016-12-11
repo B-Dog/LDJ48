@@ -12,7 +12,9 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_door</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_ds_create.gml</script>
@@ -23,12 +25,15 @@
     <script>scripts\scr_move_view.gml</script>
     <script>scripts\scr_tp_micro.gml</script>
     <script>scripts\scr_prox_check.gml</script>
+    <script>scripts\scr_move_closet.gml</script>
+    <script>scripts\scr_door_collarary.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_wall</object>
     <object>objects\obj_wall_l_h</object>
     <object>objects\obj_wall_l_v</object>
     <object>objects\obj_door</object>
+    <object>objects\obj_door_closet</object>
     <object>objects\obj_player</object>
     <object>objects\obj_cont_cell</object>
   </objects>

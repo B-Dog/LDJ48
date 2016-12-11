@@ -39,7 +39,7 @@ if(scr_gr_nei_valid(cellno,doorno)){
     cellinto = obj_cont_cell.ds_gr_map[# nx, ny]
     
     scr_tp_macro(cellinto)
-    scr_tp_micro(doorno)
+    if(cellinto == 0) { scr_move_closet(doorno) } else { scr_tp_micro(doorno) }
     scr_move_view(cellinto)
     cell_id = cellinto
     
