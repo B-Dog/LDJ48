@@ -12,9 +12,12 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_minimap</sprite>
+    <sprite>sprites\spr_room_key</sprite>
+    <sprite>sprites\spr_door_mask</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -25,10 +28,11 @@
     <script>scripts\scr_tp_macro.gml</script>
     <script>scripts\scr_move_view.gml</script>
     <script>scripts\scr_tp_micro.gml</script>
-    <script>scripts\scr_prox_check.gml</script>
+    <script>scripts\scr_add_doors.gml</script>
     <script>scripts\scr_move_closet.gml</script>
     <script>scripts\scr_door_collarary.gml</script>
     <script>scripts\scr_minimap.gml</script>
+    <script>scripts\scr_switch_rooms.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_wall</object>
@@ -39,6 +43,7 @@
     <object>objects\obj_player</object>
     <object>objects\obj_cont_cell</object>
     <object>objects\obj_minimap</object>
+    <object>objects\obj_room_key</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

@@ -1,6 +1,6 @@
 ///scr_door_collarary(doorno)
 
-doorno = argument0
+var doorno = argument0
 
 var collarary = -1
 switch(doorno) {

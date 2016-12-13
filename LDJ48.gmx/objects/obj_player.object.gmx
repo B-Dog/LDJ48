@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>cell_id = 0
+heldkey = -1
+door_touch = 0
+
+interact = noone
 </string>
           </argument>
         </arguments>
@@ -82,6 +86,30 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_door">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>door_touch = 1
+interact = other
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -101,8 +129,7 @@
             <kind>1</kind>
             <string>draw_self()
 draw_text(x,y-32,cell_id)
-draw_text(x,y+32,x)
-draw_text(x,y+40,y)
+draw_text(x,y-24,heldkey)
 </string>
           </argument>
         </arguments>
@@ -125,10 +152,22 @@ draw_text(x,y+40,y)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var close = instance_nearest(x,y,obj_door)
+            <string>
+//key section
+var close = noone
+close = instance_place(x,y,obj_room_key)
 
-if(point_distance(x,y,close.x+12,close.y+12) &lt; 30) {
-    scr_move(cell_id,close.pos)
+if(close != noone) {
+    heldkey = close.pos
+    //show_message('ping')
+}
+
+//door section
+close = noone
+close = instance_place(x,y,obj_door)
+
+if(close != noone) {
+    scr_move(cell_id,interact.pos,heldkey)
     //show_message('ping')
 }
 </string>

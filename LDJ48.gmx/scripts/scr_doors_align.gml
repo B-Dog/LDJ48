@@ -5,9 +5,14 @@ cell_into = argument1
 
 //get the door number of the opposite door
 collarary = scr_door_collarary(doorno)
-show_message('going from '+string(doorno)+'into '+string(collarary)) 
+
+/*
+show_message('going from '+string(doorno)+'into '+string(collarary))
+show_message('room '+string(cell_into)+' door at '+string(collarary)+' equals '+string(obj_cont_cell.arr_doors[cell_into,collarary]))
+*/
+
 if(obj_cont_cell.arr_doors[cell_into,collarary] == 1){ //check if there is a door in the oppostie location in the next cell
-    show_message('doors align')
+    //show_message('doors align')
     return true
 }
 

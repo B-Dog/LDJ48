@@ -1,6 +1,6 @@
 ///scr_move_closet(doorno)
 
-doorno = argument0
+var doorno = argument0;
 
 x+=324
 y+=324

@@ -1,54 +1,56 @@
 ///scr_tp_micro(door_no)
 
-doorno = argument0
+var doorno = argument0
 
 switch(doorno) {
     case 0:
-        x+=36
-        y+=564
+        x+=24
+        y+=504
         break
     case 1:
-        x+=36
-        y+=262
+        x+=24
+        y+=312
         break
     case 2:
-        x+=36
-        y+=108
+        x+=24
+        y+=120
         break
     case 3:
-        y+=602
-        x+=564
+        x+=504
+        y+=600
         break
     case 4:
-        y+=602
-        x+=262
+        x+=312
+        y+=600
         break
     case 5:
-        y+=602
-        x+=108
+        y+=600
+        x+=120
         break
     case 6:
-        x+=602
-        y+=108
+        x+=600
+        y+=120
         break
     case 7:
-        x+=602
-        y+=262
+        x+=600
+        y+=312
         break
     case 8:
-        x+=602
-        y+=564
+        x+=600
+        y+=504
         break
     case 9:
-        y+=36
-        x+=108
+        y+=24
+        x+=120
         break
     case 10:
-        y+=36
-        x+=262
+        y+=24
+        x+=312
         break
     case 11:
-        y+=36
-        x+=564
+        y+=24
+        x+=504
         break
 }
+x+=12
+y+=12

@@ -9,8 +9,11 @@ var gy = 0
 var nx = 0
 var ny = 0
 
-gx = obj_cont_cell.arr_locations[cellno,0] //get the location of the current cell from the arr_loc
-gy = obj_cont_cell.arr_locations[cellno,1] 
+//gx = obj_cont_cell.ds_gr_map[cellno,0] //get the location of the current cell from the arr_loc
+//gy = obj_cont_cell.ds_gr_map[cellno,1] 
+
+gx = ds_grid_value_x(obj_cont_cell.ds_gr_map, 0, 0, 36, 36, cellno)
+gy = ds_grid_value_y(obj_cont_cell.ds_gr_map, 0, 0, 36, 36, cellno)
 
 switch(direc) { //find the cords of the neighbouring cell in the direction supplied
     case 0:
@@ -27,15 +30,15 @@ switch(direc) { //find the cords of the neighbouring cell in the direction suppl
         break
     case 3:
         nx = gx
-        ny = gy=1
+        ny = gy+1
         break
 }
 
 
 
 
+//show_message('moving into '+(obj_cont_cell.ds_gr_map[# nx, ny]))
 if(obj_cont_cell.ds_gr_map[# nx, ny] != -1) { // if the cell isnt empty
-    show_message(obj_cont_cell.ds_gr_map[# nx, ny])
     if(scr_doors_align(doorno, obj_cont_cell.ds_gr_map[# nx, ny])) { //if the doors line up
         return true //you can ship it
     }    
